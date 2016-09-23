@@ -3,9 +3,29 @@
 # Your function definition should look like: question1(s, t) and return a boolean True or False.
 
 from itertools import permutations
+import enchant
 
-text = 'test'
+d = enchant.Dict('en-US')
 
-perms = [''.join(p) for p in permutations(text)]
+words = []
 
-print set(perms)
+def question1(s, t):
+    
+    perms = [''.join(p) for p in permutations(t)]
+    print perms
+
+    # Check is permutation of t is an anagram
+    for value in perms:
+        if d.check(value):
+            words.append(value)
+
+    # Find if anagram is part of s
+    for word in words:
+        if word in s:
+            print 'True'
+        else:
+            print 'False'                
+
+
+question1('added', 'da')
+  

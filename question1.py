@@ -7,25 +7,14 @@ import enchant
 
 d = enchant.Dict('en-US')
 
-words = []
-
 def question1(s, t):
-    
-    perms = [''.join(p) for p in permutations(t)]
-    print perms
 
     # Check is permutation of t is an anagram
-    for value in perms:
-        if d.check(value):
-            words.append(value)
+    for value in [''.join(p) for p in permutations(t)]:
+        if value in s:
+            if d.check(value):
+                return True
+    return False        
 
-    # Find if anagram is part of s
-    for word in words:
-        if word in s:
-            print 'True'
-        else:
-            print 'False'                
-
-
-question1('added', 'da')
+print question1('added', 'da')
   

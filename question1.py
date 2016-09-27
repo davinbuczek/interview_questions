@@ -9,12 +9,21 @@ d = enchant.Dict('en-US')
 
 def question1(s, t):
 
-    # Check is permutation of t is an anagram
     for value in [''.join(p) for p in permutations(t)]:
         if value in s:
             if d.check(value):
                 return True
     return False        
 
+# Test Case 1 - some anagram of 't' is a substring of 's'
+# Should return True
 print question1('added', 'da')
-  
+
+# Test Case 2 - some anagram of 't' is NOT a substring of 's'
+# Should return False
+print question1('udacity', 'ad')
+
+# Test Case 3 - one or both arguments are missing
+# Should return error because both arguments need to be present to return 
+print question1('added','')  
+

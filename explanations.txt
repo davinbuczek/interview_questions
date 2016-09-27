@@ -1,0 +1,24 @@
+Submission Instructions
+For each question, create a solution in Python (version 2). All solutions should be functions named as “question1”, “question2”, et cetera.
+Feel free to make additional helper functions or classes as needed. Code solutions must be in a file called "solutions.py".
+In the same .py file, include at least 3 test cases for each solution.
+For each test case, write the function call with the input you want to test and print it to the console, like "print question1()".
+On the next line, comment out the output you expect to see from that function call. 
+at least 2 of these must be edge cases, testing inputs such as null values, empty inputs, unusually large values, et cetera.
+Write up an explanation for each question in a single separate text file (called "explanations.txt").
+Your paragraph should not be a detailed walkthrough of the code you provided, but provide your reasoning behind decisions made in the code.
+For example, why did you use that data structure? You also need to explain the efficiency (time and space) of your solution.
+Compress your one Python and one text file into a .zip, and submit.
+
+Question 1
+
+Given two strings s and t, determine whether some anagram of t is a substring of s.
+For example: if s = "udacity" and t = "ad", then the function returns True.
+Your function definition should look like: question1(s, t) and return a boolean True or False.
+
+For my implemented solution to question1 I decided to use PyEnchant which is a spellchecking library for Python based on the Enchant Library.
+Since the definition of an anagram is a word, phrase or sentence formed from another by rearranging its letters I thought it would be a useful
+method to check whether or not a specific permutation of a given substring 't' was a word. By using a dictionary object from PyEnchant to check
+is a given permutation of a the substring t is indeed a word the solution would then check whether or not that word is present in 's'. The provided example
+does not work with my implementation because by using PyEnchant because I am constraining the substring 't' to be a word in order to return 'True'. The efficiency
+of this solution is approximately O(n).

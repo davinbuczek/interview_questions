@@ -20,14 +20,14 @@ def question2(a):
 
 def debug (message):
     "Prints debugs messages with the option to toggle on and off"
-    if True:
+    if False:
         print (message)
         
-#print question2 ('abcccde'); # 'ccc'
-#print question2 ('abcccbd'); # 'bcccb'
+print question2 ('abcccde'); # 'ccc'
+print question2 ('abcccbd'); # 'bcccb'
 print question2 ('abedccde'); # 'edccde'
-#print question2 ('abcccdeed'); # 'deed'
-#print question2 ('abcccbadeed'); # 'abcccba'
-#print question2 ('abaccddccefe'); # 'ccddcc'
-#print question2 ('ABCDEFCBA'); # ''
-#print question2 ('HYTBCABADEFGHABCDEDCBAGHTFYW1234567887654321ZWETYGDE'); # '1234567887654321'
+print question2 ('abcccdeed'); # 'deed'
+print question2 ('abcccbadeed'); # 'abcccba'
+print question2 ('abaccddccefe'); # 'ccddcc'
+print question2 ('ABCDEFCBA'); # ''
+print question2 ('HYTBCABADEFGHABCDEDCBAGHTFYW1234567887654321ZWETYGDE'); # '1234567887654321'
